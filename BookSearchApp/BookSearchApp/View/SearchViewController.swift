@@ -132,6 +132,13 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return cell
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailVC = BookDetailView()
+        detailVC.bookDocument = books[indexPath.row]
+        detailVC.modalPresentationStyle = .automatic
+        present(detailVC, animated: true, completion: nil)
+    }
+
 }
 
 

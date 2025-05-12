@@ -7,11 +7,12 @@
 
 import Foundation
 
-struct ApiResponse: Decodable {
+//codable 과 decodable?
+struct ApiResponse: Codable {
     let documents: [BookDocument]
 }
 
-struct BookDocument: Decodable {
+struct BookDocument: Codable {
     let title: String
     let authors: [String]
     let price: Int
